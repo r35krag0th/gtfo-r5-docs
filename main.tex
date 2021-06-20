@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{fmtcount}% http://ctan.org/pkg/fmtcount'
+\usepackage{xstring}
+\usepackage{siunitx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{xparse}
+\usepackage{emoji}
+\usepackage{etoolbox}
+
+\setemojifont{Noto Color Emoji}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\tikzset{level 1/.append style={sibling angle=50,level distance = 135mm}}
+\tikzset{level 2/.append style={sibling angle=20,level distance = 25mm}}
+\tikzset{every node/.append style={scale=0.5}}
+\pagestyle{empty}
+
+\usepackage{epstopdf}
+  \epstopdfDeclareGraphicsRule{.pdf}{png}{.png}{convert #1 \OutputFile}
+  \DeclareGraphicsExtensions{.png,.pdf}
+
+\usepackage{graphicx}
+% \ExecuteOptions{dvips}
+\graphicspath{ {./images/sectors/} }
+
+\usepackage{hyperref}
+
+\input{includes/utils}
+\input{includes/paragraphs}
+\input{includes/int_comms}
+\input{includes/lootables}
+
+\begin{document}
+\title{GTFO Rundown 5}
+\author{r35krag0th.tv}
+\date{May 2021}
+\maketitle
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\input{rundowns/r5/a1}
+\input{rundowns/r5/a2}
+\input{rundowns/r5/b1}
+\input{rundowns/r5/b2}
+\input{rundowns/r5/b3}
+\input{rundowns/r5/c1}
+\input{rundowns/r5/c2}
+\input{rundowns/r5/d1}
+
+\end{document}

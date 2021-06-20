@@ -1,0 +1,88 @@
+\pagebreak
+\section{A2 - Recollect}
+
+% A2 Intel brief
+\GTFOIntelBlock{Prisoners sent to locate and retrieve hisec crate.  %
+Unknown ceiling dwelling biomass present.  %
+Prisoners failing to exercise caution will not be considered a loss.}
+
+% A2 interrupted communications
+\GTFOIntCommsBlock{
+\GTFOIntCommsLine{> ... Wasn't this room empty before?}
+\GTFOIntCommsRedLine{> ... I told you those black cocoons were bad news...}
+\GTFOIntCommsLine{> ... Fuck, I hate this place even more now.}
+}
+
+\GTFOPermitsBlock{
+\GTFOPermitHigh
+\GTFOPermitExtreme
+\GTFOPermitOverload
+\GTFOPermitPrisonerEfficiency}
+
+\GTFOExpeditionMetricsBlock{
+\item{\textbf{Drop cage target depth:} 498 meters}
+}
+
+% ==> Zone Connectivity Diagram
+\pagebreak
+\subsection{Zone Connectivity}
+\zonelayout{
+\node{\textbf{Zone 15}\\
+BHK
+Hub}
+    child {
+        node {Zone 16}
+        child[concept color=\LayoutStyleHighSectorRandomOption] {node {\textbf{Zone 17}\\
+        ¿CKC?}}
+        child[concept color=\LayoutStyleHighSectorRandomOption] {node {\textbf{Zone 18}\\
+        ¿CKC?}}
+        child {
+            node {Zone 19}
+            child { node {\textbf{Zone 20}\\
+            Cargo}}
+            child[concept color=\LayoutStyleOverloadSector] {node {\textbf{Zone 302}\\
+            HDD}}
+        }
+    }
+    child[concept color=\LayoutStyleExtremeSector] {
+        node{Zone 131}
+        child { node {Zone 132\\
+        BHK}}
+    }
+}
+
+\pagebreak
+\subsection{High}
+
+The objective of \textbf{High} is to Locate the Hi-Sec Cargo and bring it to Zone 15 (Extract).
+
+\subsection{Extreme}
+
+The objective of \textbf{Extreme} is to find the given terminal (in Zone 131) to Reroute Power.
+\begin{itemize}
+    \item Starting Zone is \zone{131} and is connected to \zone{15}
+    \item This will turn off the lights.
+    \item You will need to find the \gtfobhkey{Zone 132} as well.
+    \item There will be \textbf{two} \gtfoenemyscout{} in \zone{132}.
+\end{itemize}
+
+\subsection{Overload}
+
+The objective of \textbf{Overload} is to find the Hard Drive (in Zone 302), which is protected by a \textbf{single Mother}.
+
+\subsection{Prisoner Efficiency}
+
+\begin{itemize}
+    \item Use the Bulkhead Key to unlock the \textbf{Extreme Bulkhead Door - Zone 131}
+    \item Run the \texttt{REROUTE\_POWER} command on the Terminal in Zone 131
+    \item Get the Bulkhead Key from Zone 132
+    \item Use the Bulkhead Key to unlock the \textbf{High Bulkhead Door - Zone 16}
+    \item Find the \textbf{Color Key Card} in either \textbf{Zone 17} or \textbf{Zone 18}
+    \item Use the Color Key Card to unlock Security Door for Zone 19
+    \item Do the Security Door Alarm for Zone 20's door.
+    \item Have three people ready to run into Zone 302 and deal with Mother, her children, and locating the HDD.
+    \item Pick up the Hi-Sec Cargo, and waddle towards the bridge that leads back to Extract.
+    \item Drop the Hi-Sec Cargo on the Bridge and heal with Mother, the Children, and the HDD.
+    \item Once you find the HDD (it'll be in a locker) head to extract
+\end{itemize}
+% END OF R5-A2

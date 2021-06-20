@@ -1,0 +1,54 @@
+\makeatletter
+\newcommand{\twodigit}[1]{\two@digits{#1}}
+\makeatother
+
+\newcommand{\alarm}[1]{\emoji{police-car-light} Alarm -- #1}
+\newcommand{\erroralarm}[1]{\emoji{police-car-light}\emoji{counterclockwise-arrows-button} Error Alarm -- #1}
+\newcommand{\securityscan}[1]{\emoji{check-mark} Security Scan #1}
+\newcommand{\noalarm}[1]{\emoji{muted-speaker} #1}
+\newcommand{\noscan}[1]{\emoji{unlocked} #1}
+\newcommand{\gtfokey}[1]{\framecolorbox[1.1\width]{MidnightBlue}{MidnightBlue}{\small\emoji{key} #1} \par}
+
+% Make this more abstracted for general use!
+\definecolor{mycolor}{rgb}{0.122, 0.435, 0.698}
+\newtcbox{\mybox}{on line,
+  colframe=mycolor,colback=mycolor!10!white,
+  boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt}
+
+\NewDocumentCommand{\framecolorbox}{oommm}
+ {% #1 = width (optional)
+  % #2 = inner alignment (optional)
+  % #3 = frame color
+  % #4 = background color
+  % #5 = text
+  \IfValueTF{#1}
+   {%
+    \IfValueTF{#2}
+     {\fcolorbox{#3}{#4}{\makebox[#1][#2]{#5}}}
+     {\fcolorbox{#3}{#4}{\makebox[#1]{#5}}}%
+   }
+   {\fcolorbox{#3}{#4}{#5}}%
+ }
+\newcommand{\LayoutStyleHighSector}{blue!30}
+\newcommand{\LayoutStyleHighSectorRandomOption}{blue!50}
+
+\newcommand{\LayoutStyleExtremeSector}{orange!30}
+\newcommand{\LayoutStyleExtremeSectorRandomOption}{orange!50}
+
+\newcommand{\LayoutStyleOverloadSector}{red!30}
+\newcommand{\LayoutStyleOverloadSectorRandomOption}{red!50}
+
+\newcommand{\zonelayout}[1]{
+\begin{tikzpicture}[mindmap, grow cyclic, 
+    every node/.style=concept, 
+	level 1/.append style={level distance=5cm,sibling angle=90},
+	level 2/.append style={level distance=3cm,sibling angle=90},
+	level 3/.append style={level distance=3cm,sibling angle=65},
+	level 4/.append style={level distance=2cm,sibling angle=65},
+	level 5/.append style={level distance=1.5cm,sibling angle=65},
+    concept color=\LayoutStyleHighSector,
+]
+#1
+;
+\end{tikzpicture}
+}

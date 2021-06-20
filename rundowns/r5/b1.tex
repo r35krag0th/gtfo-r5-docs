@@ -1,0 +1,215 @@
+\pagebreak
+\section{B1 - Smother}
+
+\GTFOIntelBlock{Specific DNS sample needed.  Prisoners sent to
+retrieve HSU with matching tissue quality.\\
+Air filtration system unstable.  Prisoners deemed expendable.}
+
+\GTFOIntCommsBlock{
+\GTFOIntCommsLine{>... Those horned monsters... They're - they're everywhere.}
+\GTFOIntCommsRedLine{>... Hit them in the back, even better if they're sleeping.}
+\GTFOIntCommsLine{>... [sudden noises]}
+\GTFOIntCommsLine{>... Too late now! Aaargh!}
+\GTFOIntCommsLine{>... [commotion, unintelligible]}
+}
+
+\GTFOPermitsBlock{
+\GTFOPermitHigh
+\GTFOPermitExtreme
+\GTFOPermitOverload
+\GTFOPermitPrisonerEfficiency
+}
+
+\GTFOExpeditionMetricsBlock{
+\item Drop cage target depth: 702 meters
+}
+
+\pagebreak
+\subsection{Zone Connectivity}
+\zonelayout{
+%\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=blue!30, 
+%	level 1/.append style={level distance=5cm,sibling angle=90},
+%	level 2/.append style={level distance=3cm,sibling angle=45},]
+\node{Zone 92}
+    child[concept color=\LayoutStyleHighSectorRandomOption] {node {Zone 93\\
+    ¿CKC?}}
+    child[concept color=\LayoutStyleHighSectorRandomOption] {node {Zone 97\\
+    ¿CKC?}}
+    child {
+        node {Zone 94\\
+        Hub}
+        child {
+            node {Zone 95}
+            child[concept color=\LayoutStyleHighSectorRandomOption] {node {Zone 96\\
+            ¿HSU?}}
+            child[concept color=\LayoutStyleHighSectorRandomOption] {node {Zone 98\\
+            ¿HSU?}}
+            child {
+                node {Zone 99\\
+                BHK, Hub}
+                child[concept color=\LayoutStyleOverloadSector] {
+                    node {Zone 452}
+                    child {
+                        node {Zone 453}
+                        child {
+                            node {Zone 454}
+                            child {node {Zone 455}}
+                        }
+                    }
+                    child {node {Zone 456}}
+                }
+            }
+        }
+        child[concept color=\LayoutStyleExtremeSector] {
+            node {Zone 223}
+            child {node {Zone 224}}
+            child {node {Zone 225}}
+            child {node {Zone 226}}
+        }
+    }
+}
+
+\pagebreak
+\paragraph{Ad-Hoc Notes}
+\begin{itemize}
+    \item This mission is the one with the large first room that has a lot of ladders and levels that are very maze-like.
+    \item Zone 92A is where this mission begins.
+\end{itemize}
+
+\paragraph{ZONE\_092 - The first big room}
+\begin{itemize}
+    \item {\color{Blue}Passage to Zone 93, Zone 94, and Zone 97}
+    \item Terminal is in the top left tucked way in a corner.  Use the ladders to get to the highest level.
+    \item Use this Terminal to query HSU and Color Key location
+    \item Door on the left goes to 93 -- Security Scan (No Alarm)
+    \item Door on the back goes to 97 -- Security Scan (No Alarm)
+    \item Door on the right goes to 94 and leads to 95 -- \textbf{Requires Color Key}
+\end{itemize}
+
+\paragraph{ZONE\_093 - Room One West Sec Door}
+\begin{itemize}
+    \item {\color{Red}No Passage to other zones.}
+    \item \gtfoterminal{Zone 93B on South Wall}% is in \texttt{ZONE\_093B} on the south wall of the room
+    \item This zone will have a double \gtfoenemyscout{}
+    \item Zone Letters from RIGHT to LEFT are \texttt{A - B - C}
+    \item Zone 93E is at the North end of Zone 93C
+\end{itemize}
+
+\paragraph{ZONE\_094 - Room One East Sec Door (\alarm{Class 4})}
+\begin{itemize}
+    \item {\color{Blue}Passage to Zone 95 and Extreme Bulkhead (Zone 223)}
+    \item Alarm Scan is: Single Red; 4 small red; 1 large red?
+    \item This zone will have a single \gtfoenemyscout{}
+    \item \textbf{EXTREME} Bulkhead Door is in Zone 94A (passage to Zone 224, 225, and 226)
+    \item \gtfoterminal{Zone 94B} - near Zone 95 Security Door.
+    \item Security Door to \texttt{ZONE\_095} is in Zone 94B on the East wall.  It is a normal security scan.
+    \item \gtfobhhub{Zone 94B} is in a small corner of the south east side of the room.
+\end{itemize}
+
+\paragraph{ZONE\_095 (\securityscan{})}
+\begin{itemize}
+    \item {\color{Blue}Passage to Zone 96, Zone 98, Zone 99}
+    \item This zone has chargers
+    \item This zone has two \gtfoenemyscout{}
+    \item Security Door to Zone 96 is in Zone 95A
+    \item \gtfoterminal{Zone 95A} - near Zone 96 Security Door
+\end{itemize}
+
+\paragraph{ZONE\_096 (\emoji{police-car-light}\emoji{speaker-high-volume} Error Alarm! - Big Chargers)}
+\begin{itemize}
+    \item You have 3 mins until the first spawn shows up
+    \item You will see two Big Chargers in your face every 30-45 seconds if you stand at the security door.
+    \item \gtfoterminal{Zone 96E - to the East}
+\end{itemize}
+
+\paragraph{ZONE\_097 - Zone 92's North Sec Door}
+\begin{itemize}
+    \item The Security Door is on the North wall of Zone 92B
+    \item This zone will have a \textbf{double} \gtfoenemyscout{}
+    \item \gtfoterminal{Zone 97D} -- Up the entrance ramp to the immediate left.
+    \item Zone Letters from LEFT to RIGHT are \texttt{D - B - C - E}; where E is downstairs from C.
+\end{itemize}
+
+\paragraph{ZONE\_098 (\erroralarm{}) -- Duplicate of Zone 96}
+\begin{itemize}
+    \item \gtfoterminal{Zone 98E - North Wall}
+    \item HSU is likely in Zone 98E
+    \item Completing the "DNA Sample" Scan will stop the alarm.
+\end{itemize}
+
+\paragraph{ZONE\_099 (\emoji{police-car-light} Class 4 Cluster Alarm)}
+\begin{itemize}
+    \item {\color{Blue}Passage to Overload Bulkhead (Zone 452)}
+    \item This zone will contain a \gtfobhkey{}
+    \item Security Door is on the South wall of Zone 95 up a ladder.
+    \item This zone will have a single \gtfoenemyscout{}.
+    \item \gtfoterminal{Zone 99B - East Wall}
+\end{itemize}
+
+\paragraph{ZONE\_223 - Extreme Bulkhead}
+\begin{itemize}
+    \item \emoji{warning} \textbf{The ENTIRE EXTREME IS INFECTION FOG!}
+    \item All three Power Cells can be found in Zone 223.  Each is located in a different place.
+\end{itemize}
+
+\paragraph{ZONE\_224 (Bloody Door)}
+\begin{itemize}
+    \item Has one to two \gtfoenemyscout{}
+    \item \gtfoterminal{Zone 224D} Under the stairs
+    \item \gtfogenerator{Zone 224F} East wall next to blue tarp; Enter from E
+\end{itemize}
+
+\paragraph{ZONE\_225 (Bloody Door)}
+\begin{itemize}
+    \item Has one to two \gtfoenemyscout{}
+    \item \gtfoterminal{WHERE?}
+    \item \gtfogenerator{WHERE?} -- Required for Extreme Objective
+\end{itemize}
+
+\paragraph{ZONE\_226 (Bloody Door)}
+\begin{itemize}
+    \item Has one to two \gtfoenemyscout{}
+    \item \gtfoterminal{WHERE?}
+    \item \gtfogenerator{226F} -- Required for Extreme Objective
+\end{itemize}
+
+\paragraph{ZONE\_452 - Overload Bulkhead (No Alarm)}
+\begin{itemize}
+    \item The Bulkhead Hub for Overload is in Zone 99B
+    \item This zone is completely dark, and features CHARGERS
+    \item Zone 452A - Single \gtfoenemyscout{}
+    \item There is a Mom in Zone 452A
+    \item Terminal is in Zone 452B (around the corner from the hole in the wall in Zone 452A
+    \item Use the aforementioned Terminal to "LIST REACTOR" and then "QUERY REACTOR\_..." it. (Zone 455)
+    \item Zone 452D - Single \gtfoenemyscout{} + Chargers
+    \item Zone 452F - Single \gtfoenemyscout{} + Chargers
+    \item Zone 453 Security Door is on the East wall of Zone 452H
+    \item Zone 456 Security Door is on the West wall of Zone 452A; Requires reactor to be online
+\end{itemize}
+
+\paragraph{ZONE\_453}
+\begin{itemize}
+    \item Terminal is in Zone 453B on East wall
+    \item Zone 454 Security Door is on the East wall of Zone 453C
+\end{itemize}
+
+\paragraph{ZONE\_454 (No Alarm)}
+\begin{itemize}
+    \item Terminal is just through the Security Door to the left (North)
+    \item Zone 454A - Single Charger \gtfoenemyscout{}
+    \item Zone 455 Security Door is on the East side of the bridge in Zone 454A
+\end{itemize}
+
+\paragraph{ZONE\_455 - The Reactor (No Alarm)}
+\begin{itemize}
+    \item Terminal is on the East wall across from the center of the room
+    \item Reactor Terminal is in the middle of the room
+    \item Reactor is 7 waves!  Fight for 1m20s; 30s to enter code
+    \item The last wave has Big Chargers in it; This wave is really hard.
+    \item Round about wave 3 is when the Hybrids start showing up
+\end{itemize}
+
+\paragraph{ZONE\_456 - The Last Bulkhead Key}
+\begin{itemize}
+    \item Zone 456A - Single \gtfoenemyscout{} with no other enemies in the room
+\end{itemize}

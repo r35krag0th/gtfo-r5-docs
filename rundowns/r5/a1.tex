@@ -1,0 +1,59 @@
+\section{A1 - Floodways}
+
+% A1 Intel brief
+\GTFOIntelBlock{Floodways in lockdown, override required to allow further reconnaissance.
+
+Unknown ceiling dwelling biomass present.  Prisoners failing to exercise caution will not be considered a loss.}
+
+% A1 interrupted communications
+\GTFOIntCommsBlock{
+\GTFOIntCommsLine{> ...}
+\GTFOIntCommsLine{> ...[whispering] Crouch, move slowly, don't shine on them with your flashlight...}
+\GTFOIntCommsRedLine{> ...[whispering] It's pulsating - don't move!}
+}
+
+
+\GTFOExpeditionMetricsBlock{
+\item{\textbf{Drop cage target depth:} 545 meters}
+\item{\respawncocoons}
+}
+
+\pagebreak
+\subsection{Zone Connectivity}
+
+\zonelayout{
+%\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=blue!30, 
+%	level 1/.append style={level distance=5cm,sibling angle=90},
+%	level 2/.append style={level distance=3cm,sibling angle=45},]
+\node{Zone 61}
+    child {
+        node {Zone 62}
+        % 62 -> 63
+        child {node {Zone 63}}
+    }
+    % 61 -> 64
+    child {
+        node {Zone 64}
+        child { node {Zone 65}}
+        child[concept color=\LayoutStyleExtremeSector] {
+            node {Zone 191}
+            child { node {Zone 192}}
+            child { node {Zone 193}}
+            child { node {Zone 193}}
+        }
+    }
+%
+%;
+%\end{tikzpicture}
+}
+
+\pagebreak
+\subsection{High}
+
+The objective of \textbf{High} is to find the given terminal and override lockdown.
+
+\subsection{Extreme}
+
+The objective of \textbf{Extreme} is to Collect 6 Plant Samples
+
+% END OF R5-A1

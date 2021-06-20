@@ -1,0 +1,60 @@
+\pagebreak
+\section{C1 - Binary}
+
+\GTFOIntelBlock{Network link required to obtain control over floodways quadrant maintenance systems.  %
+Prisoners sent to establish terminal uplink.  Low prisoner survival rate expected.}
+
+\GTFOIntCommsBlock{
+\GTFOIntCommsLine{>... Shit, we barely survived that, my ammo is--}
+\GTFOIntCommsLine{>... [whispering] Schh! Door's opening!}
+\GTFOIntCommsLine{>... [gasp]}
+\GTFOIntCommsRedLine{>... What the absolute fuck...}
+% \GTFOIntCommsLine{>... Those horned monsters... They're - they're everywhere.}
+% \GTFOIntCommsRedLine{>... Hit them in the back, even better if they're sleeping.}
+% \GTFOIntCommsLine{>... [sudden noises]}
+% \GTFOIntCommsLine{>... Too late now! Aaargh!}
+% \GTFOIntCommsLine{>... [commotion, unintelligible]}
+}
+
+\GTFOPermitsBlock{
+\GTFOPermitHigh
+\GTFOPermitExtreme
+% \GTFOPermitOverload
+% \GTFOPermitPrisonerEfficiency
+}
+
+\GTFOExpeditionMetricsBlock{
+\item \textbf{Drop cage target depth:} 1,004 meters
+}
+
+\pagebreak
+\subsection{Zone Connectivity}
+\zonelayout{
+%\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=blue!30, 
+%	level 1/.append style={level distance=5cm,sibling angle=90},
+%	level 2/.append style={level distance=3cm,sibling angle=45},]
+\node{\textbf{Zone 110}\\
+W-Dr}
+    child {
+        node {\textbf{Zone 111}\\
+        GEN}
+        child[concept color=\LayoutStyleHighSectorRandomOption] {node {\textbf{Zone 112}\\
+        T-UL?\\
+        Cell}}
+        child[concept color=\LayoutStyleHighSectorRandomOption] {node {\textbf{Zone 113}\\
+        T-UL?\\
+        Cell}}
+        child{
+            node {\textbf{Zone 114}}
+            child {
+                node {\textbf{Zone 115}\\
+                W-Dr}
+                child {node {\textbf{Zone 116}}}
+                child {node {\textbf{Zone 117}\\
+                T-UL}}
+                child[concept color=\LayoutStyleExtremeSector] {node {\textbf{Zone 433}\\
+                T-UL}}
+            }
+        }
+    }
+}

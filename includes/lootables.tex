@@ -1,0 +1,56 @@
+\newcommand{\gtfowrapinlinetag}[1]{\notblank{#1}{ - #1}{}}
+\newcommand{\gtfobhkey}[1]{\gtfobhkeybox{\emoji{key} \textbf{Bulkhead Key}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfockey}[1]{\gtfockeybox{\emoji{key} \textbf{Color Key}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfopowercell}[1]{\gtfopowercellbox{\emoji{battery} \textbf{Powercell}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfogenerator}[1]{\gtfogeneratorbox{\emoji{electric-plug} \textbf{Generator}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfobhhub}[1]{\gtfobhhubbox{\emoji{control-knobs} \textbf{Bulkhead Hub}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfohsu}[1]{\gtfoobjectivelootbox{\emoji{round-pushpin} \textbf{HSU}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfofogturbine}[1]{\gtfofogturbinebox{\emoji{cyclone} \textbf{Fog Turbine}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfodisinfectstation}[1]{\gtfodisinfectstationbox{\emoji{shower} \textbf{Disinfect Station}\gtfowrapinlinetag{#1}}}
+\newcommand{\gtfoterminal}[1]{\gtfoterminalbox{\emoji{desktop-computer} \textbf{Terminal}\gtfowrapinlinetag{#1}}}
+
+\newcommand{\gtfoenemyscout}{\gtfoenemybox{\emoji{ghost} Scout}}
+
+\newcommand{\zone}[1]{\texttt{ZONE\_\num[detect-family,minimum-integer-digits = 3]{#1}}}
+\newcommand{\zonex}[1]{\texttt{ZONE\_#1}}
+\newcommand{\zonecolorbox}[3]{\begin{tcolorbox}[on line,colback=#2!30,colframe=black,width=5cm,arc=3mm,auto outer arc,halign=flush center,title=#1,fonttitle=\ttfamily,center title]#3%
+%
+\end{tcolorbox}%
+}
+\newcommand{\zonecolorboxA}[3]{\begin{tcolorbox}[on line,
+  colframe=MidnightBlue,colback=MidnightBlue!10!white,
+  boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+    title=#1,
+    fonttitle=\ttfamily,
+    center title]#3\end{tcolorbox}%
+}
+
+\newtcbox{\gtfobhkeybox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=MidnightBlue,colback=MidnightBlue!10!white}
+
+\newtcbox{\gtfockeybox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=Fuchsia,colback=Fuchsia!10!white}
+  
+\newtcbox{\gtfopowercellbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=YellowOrange,colback=YellowOrange!10!white}
+  
+\newtcbox{\gtfogeneratorbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=RedOrange,colback=RedOrange!10!white}
+
+\newtcbox{\gtfobhhubbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=ProcessBlue,colback=ProcessBlue!10!white}
+  
+\newtcbox{\gtfoobjectivelootbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=ForestGreen,colback=ForestGreen!10!white}
+
+\newtcbox{\gtfofogturbinebox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=Salmon,colback=Salmon!10!white}
+  
+\newtcbox{\gtfodisinfectstationbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=Gray,colback=Gray!10!white}
+  
+\newtcbox{\gtfoterminalbox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=BrickRed,colback=SeaGreen!10!white}
+  
+\newtcbox{\gtfoenemybox}{on line,boxrule=0.5pt,arc=4pt,boxsep=0pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colframe=Red,colback=BrickRed!10!white}
